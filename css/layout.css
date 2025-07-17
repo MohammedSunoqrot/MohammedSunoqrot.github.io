@@ -399,25 +399,19 @@ ul#nav li.current a {
 }
 
 .AI {
-   width: 80%;
+   width: 85%;
    -moz-animation: AI 2s ease;
    -webkit-animation: AI 2s ease;
 }
 
-.Python {
-   width: 65%;
-   -moz-animation: Python 2s ease;
-   -webkit-animation: Python 2s ease;
-}
-
-.MATLAB {
+.Programming {
    width: 80%;
-   -moz-animation: MATLAB 2s ease;
-   -webkit-animation: MATLAB 2s ease;
+   -moz-animation: Programming 2s ease;
+   -webkit-animation: Programming 2s ease;
 }
 
 .DataAnalysis {
-   width: 80%;
+   width: 85%;
    -moz-animation: DataAnalysis 2s ease;
    -webkit-animation: DataAnalysis 2s ease;
 }
@@ -426,6 +420,12 @@ ul#nav li.current a {
    width: 95%;
    -moz-animation: Research 2s ease;
    -webkit-animation: Research 2s ease;
+}
+
+.ProjectManagement {
+   width: 80%;
+   -moz-animation: ProjectManagement 2s ease;
+   -webkit-animation: ProjectManagement 2s ease;
 }
 
 .InnovationManagement {
@@ -440,21 +440,11 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 85%;
    }
 }
 
-@-moz-keyframes Python {
-   0% {
-      width: 0px;
-   }
-
-   100% {
-      width: 65%;
-   }
-}
-
-@-moz-keyframes MATLAB {
+@-moz-keyframes Programming {
    0% {
       width: 0px;
    }
@@ -463,6 +453,7 @@ ul#nav li.current a {
       width: 80%;
    }
 }
+
 
 @-moz-keyframes DataAnalysis {
    0% {
@@ -470,7 +461,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 85%;
    }
 }
 
@@ -481,6 +472,16 @@ ul#nav li.current a {
 
    100% {
       width: 95%;
+   }
+}
+
+@-moz-keyframes ProjectManagement {
+   0% {
+      width: 0px;
+   }
+
+   100% {
+      width: 80%;
    }
 }
 
@@ -504,17 +505,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes Python {
-   0% {
-      width: 0px;
-   }
-
-   100% {
-      width: 65%;
-   }
-}
-
-@-webkit-keyframes MATLAB {
+@-webkit-keyframes Programming {
    0% {
       width: 0px;
    }
@@ -523,6 +514,7 @@ ul#nav li.current a {
       width: 80%;
    }
 }
+
 
 @-webkit-keyframes DataAnalysis {
    0% {
@@ -530,7 +522,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 85%;
    }
 }
 
@@ -541,6 +533,16 @@ ul#nav li.current a {
 
    100% {
       width: 95%;
+   }
+}
+
+@-webkit-keyframes ProjectManagement {
+   0% {
+      width: 0px;
+   }
+
+   100% {
+      width: 80%;
    }
 }
 
