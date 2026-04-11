@@ -411,7 +411,7 @@ ul#nav li.current a {
 }
 
 .DataAnalysis {
-   width: 90%;
+   width: 95%;
    -moz-animation: DataAnalysis 2s ease;
    -webkit-animation: DataAnalysis 2s ease;
 }
@@ -429,7 +429,7 @@ ul#nav li.current a {
 }
 
 .InnovationManagement {
-   width: 85%;
+   width: 90%;
    -moz-animation: InnovationManagement 2s ease;
    -webkit-animation: InnovationManagement 2s ease;
 }
@@ -440,7 +440,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 85%;
+      width: 90%;
    }
 }
 
@@ -450,7 +450,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 85%;
    }
 }
 
@@ -461,7 +461,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 85%;
+      width: 95%;
    }
 }
 
@@ -481,7 +481,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 90%;
    }
 }
 
@@ -491,7 +491,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 75%;
+      width: 90%;
    }
 }
 
@@ -501,7 +501,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 85%;
+      width: 90%;
    }
 }
 
@@ -511,7 +511,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 85%;
    }
 }
 
@@ -522,7 +522,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 85%;
+      width: 95%;
    }
 }
 
@@ -542,7 +542,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 80%;
+      width: 90%;
    }
 }
 
@@ -552,7 +552,7 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 75%;
+      width: 90%;
    }
 }
 
