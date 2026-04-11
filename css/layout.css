@@ -399,19 +399,19 @@ ul#nav li.current a {
 }
 
 .AI {
-   width: 85%;
+   width: 90%;
    -moz-animation: AI 2s ease;
    -webkit-animation: AI 2s ease;
 }
 
 .Programming {
-   width: 80%;
+   width: 85%;
    -moz-animation: Programming 2s ease;
    -webkit-animation: Programming 2s ease;
 }
 
 .DataAnalysis {
-   width: 85%;
+   width: 90%;
    -moz-animation: DataAnalysis 2s ease;
    -webkit-animation: DataAnalysis 2s ease;
 }
@@ -423,13 +423,13 @@ ul#nav li.current a {
 }
 
 .ProjectManagement {
-   width: 80%;
+   width: 90%;
    -moz-animation: ProjectManagement 2s ease;
    -webkit-animation: ProjectManagement 2s ease;
 }
 
 .InnovationManagement {
-   width: 75%;
+   width: 85%;
    -moz-animation: InnovationManagement 2s ease;
    -webkit-animation: InnovationManagement 2s ease;
 }
