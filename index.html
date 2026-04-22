@@ -1,928 +1,2431 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Sunoqrot — AI Product Leader, Manager & Researcher</title>
+  <meta name="description" content="Mohammed R.S. Sunoqrot — PhD, AI Product Leader, Manager & Researcher. Expert in translational AI for healthcare, EU MDR compliance, and AI deployment." />
+  <meta name="author" content="Mohammed R.S. Sunoqrot" />
 
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-   <title>Mohammed Sunoqrot Page</title>
-   <meta name="description" content="">
-   <meta name="author" content="">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohammed Sunoqrot — AI Product Leader" />
+  <meta property="og:description" content="PhD · 9+ Years Building Clinically Validated AI for Healthcare" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohammedsunoqrot.github.io/" />
 
-   <!-- Mobile Specific Metas
-   ================================================== -->
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-   <!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-   <link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-   <!-- Script
-   ================================================== -->
-   <script src="js/modernizr.js"></script>
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-   <!-- Favicons
-	================================================== -->
-   <link rel="shortcut icon" href="favicon.png">
+    :root {
+      --bg:        #080F1E;
+      --bg2:       #0D1627;
+      --bg3:       #111E35;
+      --card:      #13203A;
+      --card2:     #182847;
+      --border:    rgba(59,130,246,0.18);
+      --blue:      #3B82F6;
+      --blue-lt:   #60A5FA;
+      --cyan:      #06B6D4;
+      --green:     #10B981;
+      --indigo:    #6366F1;
+      --text:      #F0F6FF;
+      --text-muted:#94A3B8;
+      --text-dim:  #64748B;
+      --radius:    14px;
+      --shadow:    0 4px 32px rgba(0,0,0,0.5);
+    }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── Scrollbar ─────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+
+    /* ─── Typography ────────────────────────────────────── */
+    h1,h2,h3,h4 { font-weight: 700; line-height: 1.2; }
+    a { color: var(--blue-lt); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--cyan); }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--blue-lt) 0%, var(--cyan) 50%, var(--green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-label {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--cyan);
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ─── Layout helpers ────────────────────────────────── */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section { padding: 6rem 0; }
+
+    /* ─── Nav ───────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      transition: all .3s;
+    }
+    nav.scrolled {
+      background: rgba(8,15,30,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--blue);
+      color: white !important;
+      padding: .45rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--blue-lt) !important; color: var(--bg) !important; }
+
+    /* Mobile nav toggle */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(8,15,30,.97);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; }
+    }
+
+    /* ─── Hero ──────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 7rem 0 4rem;
+    }
+
+    /* Animated background grid */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0%   { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+
+    /* Glow blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .18;
+      animation: blobFloat 8s ease-in-out infinite;
+    }
+    .blob-1 {
+      width: 500px; height: 500px;
+      background: var(--blue);
+      top: -120px; left: -100px;
+      animation-delay: 0s;
+    }
+    .blob-2 {
+      width: 350px; height: 350px;
+      background: var(--cyan);
+      bottom: 0; right: 100px;
+      animation-delay: -3s;
+    }
+    .blob-3 {
+      width: 280px; height: 280px;
+      background: var(--green);
+      top: 40%; left: 55%;
+      animation-delay: -5s;
+    }
+
+    @keyframes blobFloat {
+      0%,100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-30px) scale(1.04); }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(59,130,246,.12);
+      border: 1px solid rgba(59,130,246,.3);
+      border-radius: 100px;
+      padding: .35rem 1rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--blue-lt);
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .4; }
+    }
+
+    .hero-name {
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1.08;
+      margin-bottom: .8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 2.2rem;
+      line-height: 1.75;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      background: var(--blue);
+      color: white;
+      padding: .8rem 1.8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: all .2s;
+      box-shadow: 0 0 0 0 rgba(59,130,246,.4);
+    }
+    .btn-primary:hover {
+      background: var(--blue-lt);
+      color: var(--bg);
+      box-shadow: 0 0 24px rgba(59,130,246,.35);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      background: transparent;
+      color: var(--text);
+      padding: .8rem 1.8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .95rem;
+      border: 1.5px solid var(--border);
+      transition: all .2s;
+    }
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue-lt);
+      background: rgba(59,130,246,.07);
+      transform: translateY(-1px);
+    }
+
+    .hero-socials {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .hero-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: all .2s;
+    }
+    .hero-socials a:hover {
+      background: rgba(59,130,246,.15);
+      border-color: var(--blue);
+      color: var(--blue-lt);
+      transform: translateY(-2px);
+    }
+
+    /* Avatar */
+    .hero-avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .hero-avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background:
+        linear-gradient(var(--card), var(--card)) padding-box,
+        linear-gradient(135deg, var(--blue), var(--cyan)) border-box;
+      box-shadow: 0 0 60px rgba(59,130,246,.3), var(--shadow);
+    }
+    .hero-avatar-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(59,130,246,.35);
+      animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-avatar-badge {
+      position: absolute;
+      bottom: 8px; right: 8px;
+      background: var(--green);
+      color: white;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .25rem .65rem;
+      border-radius: 100px;
+      box-shadow: 0 0 12px rgba(16,185,129,.5);
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-avatar-wrap { display: none; }
+      .hero-btns, .hero-socials { justify-content: center; }
+    }
+
+    /* ─── Stats bar ─────────────────────────────────────── */
+    #stats {
+      padding: 3rem 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 1.2rem .5rem;
+    }
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(135deg, var(--blue-lt), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-top: .35rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    @media (max-width: 900px) {
+      .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ─── About ─────────────────────────────────────────── */
+    #about {
+      background: var(--bg);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      line-height: 1.8;
+    }
+    .about-text p strong {
+      color: var(--text);
+    }
+    .value-props {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+    .value-prop {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color .2s;
+    }
+    .value-prop:hover { border-color: var(--blue); }
+    .value-prop-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      flex-shrink: 0;
+    }
+    .value-prop-text h4 {
+      font-size: .9rem;
+      font-weight: 600;
+      margin-bottom: .2rem;
+    }
+    .value-prop-text p {
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .about-card h4 {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--cyan);
+      margin-bottom: 1rem;
+    }
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .tag {
+      background: rgba(59,130,246,.12);
+      color: var(--blue-lt);
+      border: 1px solid rgba(59,130,246,.25);
+      padding: .3rem .75rem;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .tag.green {
+      background: rgba(16,185,129,.1);
+      color: #34D399;
+      border-color: rgba(16,185,129,.25);
+    }
+    .tag.cyan {
+      background: rgba(6,182,212,.1);
+      color: #67E8F9;
+      border-color: rgba(6,182,212,.25);
+    }
+    .tag.indigo {
+      background: rgba(99,102,241,.1);
+      color: #A5B4FC;
+      border-color: rgba(99,102,241,.25);
+    }
+
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .quick-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .65rem .85rem;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: all .2s;
+    }
+    .quick-link:hover {
+      background: rgba(59,130,246,.08);
+      border-color: var(--blue);
+      color: var(--text);
+    }
+    .quick-link i { color: var(--blue-lt); font-size: .8rem; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ─── Experience ────────────────────────────────────── */
+    #experience {
+      background: var(--bg2);
+    }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+    }
+    .exp-sidebar h3 {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .exp-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .exp-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--blue), transparent);
+    }
+    .exp-item {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-dot {
+      position: absolute;
+      left: -2.55rem;
+      top: 6px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 2px solid var(--bg2);
+      box-shadow: 0 0 10px rgba(59,130,246,.6);
+    }
+    .exp-dot.green {
+      background: var(--green);
+      box-shadow: 0 0 10px rgba(16,185,129,.6);
+    }
+    .exp-dot.cyan {
+      background: var(--cyan);
+      box-shadow: 0 0 10px rgba(6,182,212,.6);
+    }
+    .exp-period {
+      font-size: .75rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      margin-bottom: .4rem;
+    }
+    .exp-role {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: .2rem;
+    }
+    .exp-org {
+      font-size: .87rem;
+      color: var(--blue-lt);
+      font-weight: 500;
+      margin-bottom: .75rem;
+    }
+    .exp-desc {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .exp-highlights {
+      margin-top: .8rem;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .exp-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      font-size: .83rem;
+      color: var(--text-muted);
+    }
+    .exp-highlight::before {
+      content: '▸';
+      color: var(--blue-lt);
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: .9rem;
+    }
+    .exp-tag {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: .2rem .6rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    @media (max-width: 768px) {
+      .experience-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Featured Project ──────────────────────────────── */
+    #proviz {
+      background: var(--bg);
+    }
+    .proviz-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+    }
+    .proviz-left {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .proviz-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--cyan);
+      background: rgba(6,182,212,.1);
+      border: 1px solid rgba(6,182,212,.25);
+      padding: .3rem .85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+    .proviz-title {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .proviz-sub {
+      font-size: .95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .proviz-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-bottom: 2rem;
+    }
+    .proviz-metric {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .85rem 1rem;
+    }
+    .proviz-metric-val {
+      font-size: 1.4rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--blue-lt);
+    }
+    .proviz-metric-label {
+      font-size: .72rem;
+      color: var(--text-muted);
+      margin-top: .15rem;
+    }
+    .proviz-right {
+      background: linear-gradient(135deg, #0D1F3C 0%, #102040 50%, #091929 100%);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      border-left: 1px solid var(--border);
+    }
+    .proviz-phase {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      transition: all .2s;
+    }
+    .proviz-phase:hover {
+      border-color: var(--blue);
+      background: rgba(59,130,246,.06);
+    }
+    .proviz-phase-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: .4rem;
+    }
+    .proviz-phase-icon {
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+    }
+    .proviz-phase h4 {
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    .proviz-phase p {
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+    .proviz-patent {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .9rem 1.1rem;
+      background: rgba(16,185,129,.08);
+      border: 1px solid rgba(16,185,129,.2);
+      border-radius: 10px;
+    }
+    .proviz-patent i { color: var(--green); }
+    .proviz-patent span {
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+    .proviz-patent strong { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .proviz-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .proviz-right { border-left: none; border-top: 1px solid var(--border); }
+    }
+
+    /* ─── Skills ────────────────────────────────────────── */
+    #skills {
+      background: var(--bg2);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all .25s;
+    }
+    .skill-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.12);
+    }
+    .skill-card-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      margin-bottom: 1.1rem;
+    }
+    .skill-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: .85rem;
+    }
+    .skill-items {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .83rem;
+      color: var(--text-muted);
+    }
+    .skill-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Projects ──────────────────────────────────────── */
+    #projects {
+      background: var(--bg);
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: all .25s;
+    }
+    .project-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.12);
+    }
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: .85rem;
+    }
+    .project-icon {
+      font-size: 1.5rem;
+    }
+    .project-links {
+      display: flex;
+      gap: .6rem;
+    }
+    .project-link {
+      color: var(--text-dim);
+      font-size: .9rem;
+      transition: color .2s;
+    }
+    .project-link:hover { color: var(--blue-lt); }
+    .project-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .project-card p {
+      font-size: .82rem;
+      color: var(--text-muted);
+      flex: 1;
+      line-height: 1.65;
+    }
+    .project-footer {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Publications ──────────────────────────────────── */
+    #publications {
+      background: var(--bg2);
+    }
+    .pub-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .pub-links-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .pub-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: .55rem 1.1rem;
+      border-radius: 8px;
+      font-size: .83rem;
+      font-weight: 500;
+      transition: all .2s;
+    }
+    .pub-link-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue-lt);
+      background: rgba(59,130,246,.07);
+    }
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pub-item {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all .2s;
+    }
+    .pub-item:hover {
+      border-color: rgba(59,130,246,.35);
+      background: var(--card2);
+    }
+    .pub-num {
+      font-size: .8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      min-width: 2rem;
+      padding-top: .15rem;
+    }
+    .pub-body h4 {
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: .3rem;
+      line-height: 1.45;
+    }
+    .pub-meta {
+      font-size: .8rem;
+      color: var(--text-dim);
+    }
+    .pub-meta em {
+      color: var(--blue-lt);
+      font-style: normal;
+      font-weight: 500;
+    }
+    .pub-year-badge {
+      display: inline-block;
+      margin-left: .6rem;
+      background: rgba(99,102,241,.12);
+      color: #A5B4FC;
+      border: 1px solid rgba(99,102,241,.25);
+      font-size: .7rem;
+      font-weight: 600;
+      padding: .1rem .5rem;
+      border-radius: 100px;
+    }
+
+    /* ─── Funding ───────────────────────────────────────── */
+    #funding {
+      background: var(--bg);
+    }
+    .funding-banner {
+      background: linear-gradient(135deg, #0D1F3C 0%, #0E2642 50%, #091929 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .funding-banner h3 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: .75rem;
+    }
+    .funding-banner p {
+      color: var(--text-muted);
+      font-size: .95rem;
+    }
+    .funding-total {
+      text-align: center;
+    }
+    .funding-total-num {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .funding-total-sub {
+      font-size: .85rem;
+      color: var(--text-muted);
+      margin-top: .4rem;
+    }
+
+    .funding-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .funding-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      transition: border-color .2s;
+    }
+    .funding-item:hover { border-color: rgba(59,130,246,.35); }
+    .funding-role {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      margin-bottom: .4rem;
+    }
+    .funding-role.pi    { color: var(--green); }
+    .funding-role.co    { color: var(--blue-lt); }
+    .funding-role.lead  { color: var(--cyan); }
+    .funding-role.contrib { color: var(--text-dim); }
+    .funding-item h4 {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: .3rem;
+      line-height: 1.4;
+    }
+    .funding-amount {
+      font-size: .8rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 768px) {
+      .funding-banner { grid-template-columns: 1fr; }
+      .funding-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Contact ───────────────────────────────────────── */
+    #contact {
+      background: var(--bg2);
+    }
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: .85rem;
+    }
+    .contact-info p {
+      color: var(--text-muted);
+      font-size: .95rem;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: .9rem;
+    }
+    .contact-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-lt);
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+    }
+    .contact-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: .4rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,.04);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      color: var(--text);
+      font-size: .9rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color .2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      background: rgba(59,130,246,.04);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .btn-form {
+      width: 100%;
+      padding: .85rem;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all .2s;
+      margin-top: .5rem;
+    }
+    .btn-form:hover {
+      background: var(--blue-lt);
+      color: var(--bg);
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Footer ────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-left p {
+      font-size: .82rem;
+      color: var(--text-dim);
+    }
+    .footer-socials {
+      display: flex;
+      gap: .75rem;
+    }
+    .footer-socials a {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: .85rem;
+      transition: all .2s;
+    }
+    .footer-socials a:hover {
+      background: rgba(59,130,246,.12);
+      border-color: var(--blue);
+      color: var(--blue-lt);
+    }
+
+    /* ─── Scroll animations ─────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── Dividers ──────────────────────────────────────── */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin: 0 2rem;
+    }
+
+    /* ─── Tooltips ──────────────────────────────────────── */
+    [data-tooltip] {
+      position: relative;
+    }
+    [data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1E3A5F;
+      color: var(--text);
+      font-size: .75rem;
+      padding: .35rem .75rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
+  </style>
 </head>
-
 <body>
 
-   <!-- Header
-   ================================================== -->
-   <header id="home">
+<!-- ─── Nav ──────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">MRS<span>.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#proviz">PROVIZ</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-      <nav id="nav-wrap">
+<!-- ─── Hero ─────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
 
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Open to new opportunities
+        </div>
 
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a class="smoothscroll" href="#Publications">Publications</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-         </ul> <!-- end #nav -->
+        <h1 class="hero-name">
+          Mohammed<br>
+          <span class="gradient-text">Sunoqrot</span>
+        </h1>
 
-      </nav> <!-- end #nav-wrap -->
+        <p class="hero-title">
+          <strong>AI Product Leader, Manager</strong> &amp; <strong>Researcher</strong>
+          <br>PhD · NTNU · 9+ Years in Clinical AI
+        </p>
 
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">I'm Mohammed Sunoqrot.</h1>
-            <h3>An <span>AI researcher, product manager, and scientist</span> developing
-               <span>innovative</span>
-               tools and software for a better future. Let's <a class="smoothscroll" href="#about">start scrolling</a>
-               and learn more <a class="smoothscroll" href="#about">about me</a>.
-            </h3>
-            <hr />
-            <ul class="social">
-               <li><a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://github.com/MohammedSunoqrot"><i class="fa fa-github"></i></a></li>
-               <li><a href="https://twitter.com/SunoqrotM"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-         </div>
+        <p class="hero-desc">
+          I build AI that saves lives. From writing the first lines of research code to securing €800K in
+          funding, running prospective clinical trials, and preparing EU MDR regulatory filings —
+          I bridge the gap between cutting-edge AI and real clinical impact.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#proviz" class="btn-primary">
+            <i class="fa-solid fa-flask-vial"></i> See My Work
+          </a>
+          <a href="#contact" class="btn-outline">
+            <i class="fa-solid fa-envelope"></i> Get In Touch
+          </a>
+          <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="btn-outline">
+            <i class="fa-brands fa-google-scholar"></i> Scholar
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/MohammedSunoqrot" target="_blank" aria-label="GitHub" data-tooltip="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://orcid.org/0000-0001-9239-1683" target="_blank" aria-label="ORCID" data-tooltip="ORCID">
+            <i class="fa-brands fa-orcid"></i>
+          </a>
+          <a href="https://twitter.com/SunoqrotM" target="_blank" aria-label="Twitter/X" data-tooltip="Twitter/X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
       </div>
 
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
+      <div class="hero-avatar-wrap">
+        <div class="hero-avatar-ring"></div>
+        <img src="images/profilepic.jpg" alt="Mohammed Sunoqrot" class="hero-avatar" />
+        <span class="hero-avatar-badge">PhD · AI · MRI</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-   </header> <!-- Header End -->
+<!-- ─── Stats ─────────────────────────────────────────────── -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="800" data-suffix="K+">0</div>
+        <div class="stat-label">USD Funding Secured</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="115" data-suffix="+">0</div>
+        <div class="stat-label">Patients Enrolled</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="17" data-suffix="+">0</div>
+        <div class="stat-label">Peer-Reviewed Papers</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="9" data-suffix="">0</div>
+        <div class="stat-label">H-Index</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="5000" data-suffix="+">0</div>
+        <div class="stat-label">Patient Data Managed</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="9" data-suffix="+ yrs">0</div>
+        <div class="stat-label">Years in AI Research</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ─── About ─────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Where AI Research Meets<br><span class="gradient-text">Clinical Reality</span></h2>
 
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
+        <p>
+          I am an <strong>AI Product Leader and Medical Imaging Researcher</strong> with a PhD in Medical
+          Technology from NTNU and 9+ years of experience at the intersection of artificial intelligence,
+          biomedical engineering, and translational healthcare innovation.
+        </p>
+        <p>
+          My flagship achievement is <strong>PROVIZ</strong> — an AI-based decision-support system for
+          prostate MRI that I drove from early-stage research (TRL 2) to a clinically validated,
+          EU MDR-aligned product (TRL ~7). Along the way, I secured €800K+ in grants, designed and ran
+          a prospective clinical study with 115+ patients, authored regulatory documentation, and built
+          collaborative pipelines with radiologists, IT engineers, and medtech companies.
+        </p>
+        <p>
+          I bring a rare combination of <strong>deep technical expertise</strong> (machine learning, deep
+          learning, radiomics, Python) and <strong>product leadership skills</strong> (roadmapping,
+          stakeholder management, EU MDR/SaMD compliance) — exactly what organizations need to turn
+          AI research into real-world healthcare products.
+        </p>
 
-      <div class="row">
-
-         <div class="three columns">
-
-            <img class="profile-pic" src="images/profilepic.jpg" alt="" />
-
-         </div>
-
-         <div class="nine columns main-col">
-
-            <h2>About Me</h2>
-
-            <p>I am an AI product manager, researcher and data scientist with a PhD in medical technology and a background in
-               biomedical engineering. My work centers on advancing AI-driven solutions, with a history of
-               focus on medical imaging and diagnostic support systems.<br>
-              
-               I bring expertise in artificial intelligence, machine learning, and data science, combined with hands-on
-               experience in clinical research, regulatory documentation for medical software, and innovation management.
-               I have led the development and clinical validation of AI systems, secured multi-million NOK research funding,
-               contributed to patent applications, and participated in national and international innovation programs.<br>
-               
-               Throughout my career, I have collaborated with interdisciplinary teams, industry partners, and end-users to
-               bridge the gap between cutting-edge research and real-world healthcare impact.
-               My passion lies in harnessing data and technology to improve standard of life.<br>
-               
-               Let us connect to explore opportunities and shape the future of technology innovation.
-            </p>
-
-            <div class="row">
-
-               <div class="columns contact-details">
-
-                  <h2>Contact Email</h2>
-                  <p class="address">
-                     <!-- <span>Mohammed R. S. Sunoqrot</span><br>
-                     <span>1.306B Fred Kavli-bygget, del 1 Øya<br>
-                        7030 Trondheim, Norway
-                     </span><br>
-                     <span>(+47) 46632587</span><br> -->
-                     <span>mohammed.sunoqrot@gmail.com</span>
-                  </p>
-
-               </div>
-
-               <div class="columns download">
-                  <!-- <p>
-                     <a href="documents/CV.pdf" class="button"><i class="fa fa-download"></i>Download Resume</a>
-                  </p> -->
-               </div>
-
-            </div> <!-- end row -->
-
-         </div> <!-- end .main-col -->
-
+        <div class="value-props">
+          <div class="value-prop">
+            <div class="value-prop-icon" style="background:rgba(59,130,246,.12); color:var(--blue-lt);">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="value-prop-text">
+              <h4>Deep AI Expertise</h4>
+              <p>GANs, CNNs, radiomics, nnU-Net — not just a PM who talks about AI, but someone who builds it.</p>
+            </div>
+          </div>
+          <div class="value-prop">
+            <div class="value-prop-icon" style="background:rgba(6,182,212,.1); color:var(--cyan);">
+              <i class="fa-solid fa-file-medical"></i>
+            </div>
+            <div class="value-prop-text">
+              <h4>EU MDR &amp; Regulatory Fluency</h4>
+              <p>Authored risk management, clinical evaluation, and technical files for SaMD — rare in AI leadership.</p>
+            </div>
+          </div>
+          <div class="value-prop">
+            <div class="value-prop-icon" style="background:rgba(16,185,129,.1); color:var(--green);">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="value-prop-text">
+              <h4>Proven Product-to-Market Track Record</h4>
+              <p>Moved PROVIZ from TRL 2 to ~7, enrolled clinical study, initiated 10+ industry partnership talks.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-   </section> <!-- About Section End-->
-
-
-   <!-- Resume Section
-   ================================================== -->
-   <section id="resume">
-
-      <!-- Education
-      ----------------------------------------------- -->
-      <div class="row education">
-
-         <div class="three columns header-col">
-            <h1><span>Education</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Ph.D. in Medical Technology</h3>
-                  <p class="info">NTNU, Norway <span>&bull;</span> <em class="date">August 2021</em></p>
-
-                  <p>
-                     Thesis title: Computer-Aided Diagnosis of Prostate Cancer Using Multiparametric MRI:<br>
-                     Pre-processing, Segmentation and Quality Control.<br>
-                     <i>Supervisors: Prof. Tone Frost Bathen and Assoc Prof. Mattijs Elschot.</i>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>M.Sc. in Biomedical Engineering</h3>
-                  <p class="info">University of Dundee, UK <span>&bull;</span> <em class="date">January 2016</em>
-                  </p>
-
-                  <p>
-                     Grade: Distinction.<br>
-                     Thesis title: Microultrasound scanning of Oesophogeal tissue.<br>
-                     <i>Supervisors: Prof. Sandy Cochran and Assoc Prof. Ben F. Cox.</i>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>B.Sc. in Biomedical Engineering</h3>
-                  <p class="info">German-Jordanian University, Jordan <span>&bull;</span> <em class="date">June 2014</em></p> 
-                  <p>
-                     Thesis title: Radiation Doses And Risks From Computed Tomography In Jordan.<br>
-                     <i>Supervisor: Assoc Prof. Akeel Alkazwini.</i>
-                  </p>  
-               </div>
-               
-            </div> <!-- item end -->  
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Education -->
-
-
-      <!-- Work
-      ----------------------------------------------- -->
-      <div class="row work">
-
-         <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Postdoctoral Researcher</h3>
-                  <p class="info">NTNU, Norway <span>&bull;</span> <em class="date">July 2022 - December 2025</em></p>
-
-                  <p>
-                     In this multifaceted role, I lead the development and clinical validation of AI-based diagnostic tools
-                     for prostate cancer. My work included elevating the technology readiness level (TRL) of the PROVIZ AI system,
-                     securing research funding, and designing a prospective clinical study.
-                     I prepared regulatory documentation for software as a medical device, mentored master students,
-                     and contributed to international collaborations aimed at enhancing AI diagnostics.
-                     I have also participated in the REACH incubator and Forge accelerator programs
-                     to support innovation and commercialization efforts.
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Innovation Project Manager</h3>
-                  <p class="info">NTNU, Norway <span>&bull;</span> <em class="date">January 2022 - July 2022</em></p>
-
-                  <p>
-                     In this dynamic role, I investigated innovative AI solutions for prostate cancer diagnosis. I
-                     increased technology readiness levels for a cutting-edge radiology AI product. Additionally, I
-                     conducted market analysis, initiated meetings with industry stakeholders and customers, and
-                     coordinated seamlessly with the technology transfer office and valued industry partners.
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Data & Cloud Manager - <i>Part-time</i></h3>
-                  <p class="info">NTNU, Norway <span>&bull;</span> <em class="date">May 2018 - December 2025</em></p>
-
-                  <p>
-                     In this capacity, I am managing and organizing multiple HUNT cloud labs for the CIMORe
-                     Group. I skillfully coordinate various aspects of the labs, ensuring compliance, data privacy,
-                     technical proficiency, and knowledge dissemination. I am diligently monitoring and addressing any
-                     troubleshooting needs that arise during the labs' activities. My responsibilities encompass the
-                     collection, management, organization, and secure handling of MR image cohorts. Upholding strict
-                     data privacy and security measures is of paramount importance in my role. Moreover, I am closely
-                     monitoring image quality and upholding data integrity standards throughout the process.
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Work -->
-
-
-      <!-- Skills
-      ----------------------------------------------- -->
-      <div class="row skill">
-
-         <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <p>
-            </p>
-
-            <div class="bars">
-
-               <ul class="skills">
-                  <li><span class="bar-expand AI"></span><em>AI (machine & deep learning)</em></li>
-                  <li><span class="bar-expand Programming"></span><em>Programming (Python, Matlab)</em></li>
-                  <li><span class="bar-expand DataAnalysis"></span><em>Data Analysis</em></li>
-                  <li><span class="bar-expand Research"></span><em>Research</em></li>
-                  <li><span class="bar-expand ProjectManagement"></span><em>Product & Project Management</em></li>
-                  <li><span class="bar-expand InnovationManagement"></span><em>Innovation Management</em></li>
-               </ul>
-
-            </div><!-- end skill-bars -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End skills -->
-
-   </section> <!-- Resume Section End-->
-
-
-   <!-- <!-- Portfolio Section
-   ================================================== -->
-   <section id="portfolio">
-
-      <div class="row">
-
-         <div class="twelve columns collapsed">
-
-            <h1>Check Out Some of My Work And Projects I am Working With.</h1>
-
-            <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/proviz.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>PROVIZ</h5>
-                              <p>AI, Image analysis</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-02" title="">
-                        <img alt="" src="images/portfolio/aids.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>AI decision support</h5>
-                              <p>AI, Image analysis</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-03" title="">
-                        <img alt="" src="images/portfolio/cad.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>CAD Prostate</h5>
-                              <p>AI, Image analysis</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-04" title="">
-                        <img alt="" src="images/portfolio/pcagan.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>PCaGAN</h5>
-                              <p>AI, Image analysis</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-05" title="">
-                        <img alt="" src="images/portfolio/autorf.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>AutoRef</h5>
-                              <p>Python, Object detection, normalization</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-06" title="">
-                        <img alt="" src="images/portfolio/psqc.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>PSQC</h5>
-                              <p>Python, Segmentation, QC</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-07" title="">
-                        <img alt="" src="images/portfolio/radiomics.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>Radiomics</h5>
-                              <p>Reproducibility</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="#modal-08" title="">
-                        <img alt="" src="images/portfolio/segmentation.png">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-                              <h5>Segmentation</h5>
-                              <p>Deep learning</p>
-                           </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-               </div> <!-- item end -->
-
-            </div> <!-- portfolio-wrapper end -->
-
-         </div> <!-- twelve columns end -->
-
-
-         <!-- Modal Popup
-	      --------------------------------------------------------------- -->
-
-         <div id="modal-01" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-proviz.png" alt="" />
-
-            <div class="description-box">
-               <h4>PROVIZ</h4>
-               <p>A fully-automated, end-to-end analysis pipeline for MRI images that pre-processes and analyzes the
-                  captured data resulting in a decision support system for the radiologist. The machine learning model
-                  outputs tumor detection and probability maps indicating the location and likelihood of malicious
-                  tissue in the prostate.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
+      <div class="about-right fade-in">
+        <div class="about-card">
+          <h4>Core Expertise</h4>
+          <div class="tag-cloud">
+            <span class="tag">AI Product Management</span>
+            <span class="tag">Medical Imaging AI</span>
+            <span class="tag green">EU MDR / SaMD</span>
+            <span class="tag cyan">Clinical Validation</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Radiomics</span>
+            <span class="tag indigo">Python</span>
+            <span class="tag green">Research Leadership</span>
+            <span class="tag cyan">Grant Writing</span>
+            <span class="tag">Prostate MRI</span>
+            <span class="tag indigo">GDPR Compliance</span>
+            <span class="tag">Stakeholder Management</span>
+            <span class="tag green">Cross-functional Teams</span>
+            <span class="tag cyan">Data Pipelines</span>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h4>Profiles &amp; Links</h4>
+          <div class="quick-links">
+            <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-google-scholar" style="margin-right:.5rem;"></i> Google Scholar</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://orcid.org/0000-0001-9239-1683" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-orcid" style="margin-right:.5rem;"></i> ORCID — 0000-0001-9239-1683</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://nva.sikt.no/research-profile/891930" target="_blank" class="quick-link">
+              <span><i class="fa-solid fa-book-open" style="margin-right:.5rem;"></i> NVA Research Profile</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-linkedin-in" style="margin-right:.5rem;"></i> LinkedIn</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/MohammedSunoqrot" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-github" style="margin-right:.5rem;"></i> GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.ntnu.edu/employees/mohammed.sunoqrot" target="_blank" class="quick-link">
+              <span><i class="fa-solid fa-university" style="margin-right:.5rem;"></i> NTNU Profile</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h4>Education</h4>
+          <div style="display:flex;flex-direction:column;gap:.85rem;">
+            <div>
+              <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.15rem;">
+                PhD · Medical Technology
+              </div>
+              <div style="font-size:.8rem;color:var(--blue-lt);">NTNU, Norway · 2017–2021</div>
+              <div style="font-size:.78rem;color:var(--text-dim);margin-top:.15rem;">Computer-Aided Diagnosis of Prostate Cancer Using Multiparametric MRI</div>
             </div>
-
-            <div class="link-box">
-               <a href="https://www.ntnutto.no/prosjekter-items/proviz/" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
+            <div>
+              <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.15rem;">
+                MSc · Biomedical Engineering <em style="color:var(--green);font-style:normal;font-size:.78rem;"> Distinction</em>
+              </div>
+              <div style="font-size:.8rem;color:var(--blue-lt);">University of Dundee, UK · 2015–2016</div>
             </div>
-
-         </div><!-- modal-01 End -->
-
-         <div id="modal-02" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-aids.png" alt="" />
-
-            <div class="description-box">
-               <h4>AI-based decision support system for detection and localization of prostate cancer</h4>
-               <p>The aim of this project is to develop, optimize, and validate a robust, accurate, precise and
-                  generalized AI-based decision support system using mpMRI for prostate cancer detection and
-                  localization with a large, multicenter cohort.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
+            <div>
+              <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.15rem;">
+                BSc · Biomedical Engineering
+              </div>
+              <div style="font-size:.8rem;color:var(--blue-lt);">German-Jordanian University · 2009–2014</div>
+              <div style="font-size:.78rem;color:var(--text-dim);margin-top:.15rem;">Exchange year at Koblenz University of Applied Sciences, Germany</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="link-box">
-               <a href="https://www.ntnu.edu/employees/mohammed.sunoqrot" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
+<!-- ─── Experience ─────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <div style="margin-bottom:3rem;" class="fade-in">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+    </div>
+
+    <div class="experience-grid">
+      <div class="exp-sidebar fade-in">
+        <div class="about-card" style="position:sticky;top:5.5rem;">
+          <h4>Career Highlights</h4>
+          <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem;">
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-trophy" style="color:var(--green);width:1.2rem;"></i>
+              Led 8M+ NOK research portfolio
             </div>
-
-         </div><!-- modal-02 End -->
-
-         <div id="modal-03" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-cad.png" alt="" />
-
-            <div class="description-box">
-               <h4>Computer-Aided Diagnosis of Prostate Cancer Using Multiparametric MRI</h4>
-               <p>In this thesis advanced image pre-processing and quality control methods were developed and evaluated
-                  for CAD of prostate cancer using mpMRI. Ultimately, these automated methods can help improve the
-                  performance of and increase the confidence in CAD systems, which is an important step towards their
-                  implementation in clinical practice.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-microscope" style="color:var(--blue-lt);width:1.2rem;"></i>
+              Ran prospective clinical trial (NCT06000046)
             </div>
-
-            <div class="link-box">
-               <a href="https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2779848" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-file-contract" style="color:var(--cyan);width:1.2rem;"></i>
+              EU MDR regulatory filings (CIV-NO-23-04-042915)
             </div>
-
-         </div><!-- modal-03 End -->
-
-         <div id="modal-04" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-pcagan.png" alt="" />
-
-            <div class="description-box">
-               <h4>PCaGAN</h4>
-               <p>Generative Adversarial Networks (GANs) have shown potential in medical imaging. In this project,
-                  GANs are investigated for prostate cancer detection on bi-parametric
-                  magnetic resonance images (MRI).</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-patent" style="color:var(--indigo);width:1.2rem;"></i>
+              Co-inventor PCT/EP2023/061976
             </div>
-
-            <div class="link-box">
-               <a href="https://github.com/alexofficial/PCaGAN" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-people-group" style="color:var(--green);width:1.2rem;"></i>
+              PI-CAI Consortium (10,000+ MRI exams)
             </div>
-
-         </div><!-- modal-04 End -->
-
-         <div id="modal-05" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-autoref.png" alt="" />
-
-            <div class="description-box">
-               <h4>AutoRef</h4>
-               <p>An automated dual-reference tissue normalization of T2W images could help improve the quantitative
-                  assessment of prostate cancer. The method is avilable to be used in MATLAB and python (pip install
-                  pyAutoRef).</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
+            <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
+              <i class="fa-solid fa-chalkboard-teacher" style="color:var(--blue-lt);width:1.2rem;"></i>
+              Supervised 7 graduate students
             </div>
-
-            <div class="link-box">
-               <a href="https://github.com/MohammedSunoqrot/pyAutoRef" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-         </div><!-- modal-05 End -->
-
-         <div id="modal-06" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-psqc.png" alt="" />
-
-            <div class="description-box">
-               <h4>Prostate Segmentation Quality Control System</h4>
-               <p>A fully automated quality control system that generate a quality score and class for assessing the
-                  accuracy of automated prostate segmentations on T2W MR imagese. The system is avilable to be used in
-                  MATLAB and python (pip install pyPSQC)</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
-            </div>
-
-            <div class="link-box">
-               <a href="https://github.com/MohammedSunoqrot/pyPSQC" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-         </div><!-- modal-06 End -->
-
-         <div id="modal-07" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-radiomics.png" alt="" />
-
-            <div class="description-box">
-               <h4>Radiomics</h4>
-               <p>I have multiple studies were I invistigate radiomics features reproducibility and potintials.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
-            </div>
-
-            <div class="link-box">
-               <a href="https://github.com/MohammedSunoqrot/SegmentationReproducibility" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-         </div><!-- modal-07 End -->
-
-         <div id="modal-08" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-segmentation.png" alt="" />
-
-            <div class="description-box">
-               <h4>Segmentation</h4>
-               <p>I have multiple studies were I invistigate deep learning segmentation.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Trondheim, Norway</span>
-            </div>
-
-            <div class="link-box">
-               <a href="https://www.ntnu.edu/employees/mohammed.sunoqrot" target="_blank">Details</a>
-               <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-         </div><!-- modal-01 End -->
-
-
-      </div> <!-- row End -->
-
-   </section> <!-- Portfolio Section End-->
-
-
-   <!-- Call-To-Action Section
-   ================================================== -->
-   <section id="call-to-action">
-
-      <div class="row">
-
-         <div class="two columns header-col">
-
-            <h1><span>Get Hosting.</span></h1>
-
-         </div>
-
-         <div class="seven columns">
-
-            <h2><span class="lead">Publications</span></h2>
-            <p><span class="lead"> My Publications can be found at <a
-                     href="https://nva.sikt.no/research-profile/891930">NVA</a>
-                  and at <a href="https://orcid.org/0000-0001-9239-1683">ORCiD</a></span></p>
-
-         </div>
-
-         <div class="three columns action">
-
-
-
-         </div>
-
+          </div>
+        </div>
       </div>
 
-   </section> <!-- Call-To-Action Section End-->
+      <div class="exp-timeline fade-in">
 
+        <div class="exp-item">
+          <div class="exp-dot green"></div>
+          <div class="exp-period">Jul 2022 — Dec 2025</div>
+          <div class="exp-role">Postdoctoral Researcher — AI Product &amp; Project Lead</div>
+          <div class="exp-org">Norwegian University of Science and Technology (NTNU), Trondheim, Norway</div>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Led PROVIZ, an AI MRI decision-support system for prostate cancer, from concept to clinically tested product — increasing TRL from 2 to ~7.</div>
+            <div class="exp-highlight">Secured and managed 8M NOK (~$800K) in grants, enabling productization, validation, and commercialization readiness.</div>
+            <div class="exp-highlight">Designed and ran prospective clinical study (NCT06000046) integrating PROVIZ into routine MRI workflow — 115+ patients enrolled.</div>
+            <div class="exp-highlight">Authored EU MDR-aligned documentation: risk management, clinical evaluation, and technical files (CIV-NO-23-04-042915; KULMU A 479272).</div>
+            <div class="exp-highlight">Translated feedback from 25+ clinicians and analysis of 20+ competing solutions into product backlog and prioritized roadmap.</div>
+            <div class="exp-highlight">Initiated talks with 10+ medtech and AI companies, generating 3+ qualified partnership and deployment opportunities.</div>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">AI Product Management</span>
+            <span class="exp-tag">EU MDR</span>
+            <span class="exp-tag">Clinical Trials</span>
+            <span class="exp-tag">Grant Funding</span>
+            <span class="exp-tag">Deep Learning</span>
+            <span class="exp-tag">Python</span>
+          </div>
+        </div>
 
-   <!-- Publications Section
-   ================================================== -->
-   <section id="Publications">
+        <div class="exp-item">
+          <div class="exp-dot" style="background:var(--cyan);box-shadow:0 0 10px rgba(6,182,212,.6);"></div>
+          <div class="exp-period">Jan 2022 — Jul 2022</div>
+          <div class="exp-role">Innovation &amp; Product Manager</div>
+          <div class="exp-org">Norwegian University of Science and Technology (NTNU), Trondheim, Norway</div>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Turned PROVIZ from research output into defined product concept — mapping clinical needs, analysing competitors, defining value propositions for radiologists and hospitals.</div>
+            <div class="exp-highlight">Managed 600K NOK innovation programme, setting milestones and KPIs that raised business readiness from TRL 1 to 3.</div>
+            <div class="exp-highlight">Led patenting activities as co-inventor (PCT/EP2023/061976), working with NTNU TTO on IP strategy and licensing options.</div>
+            <div class="exp-highlight">Coordinated workshops with 15+ external stakeholders to stress-test go-to-market assumptions and identify pilot paths.</div>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Innovation Management</span>
+            <span class="exp-tag">IP Strategy</span>
+            <span class="exp-tag">Market Analysis</span>
+            <span class="exp-tag">Stakeholder Engagement</span>
+          </div>
+        </div>
 
-      <div class="text-container">
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-period">Aug 2021 — Jan 2022</div>
+          <div class="exp-role">Researcher</div>
+          <div class="exp-org">Norwegian University of Science and Technology (NTNU), Trondheim, Norway</div>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Developed GAN, CNN, and radiomics-based pre-processing and detection methods for MRI image analysis.</div>
+            <div class="exp-highlight">Consortium member in PI-CAI grand challenge — benchmarking AI against radiologists on 10,000 prostate MRI exams.</div>
+            <div class="exp-highlight">Supervised 4 students and taught 2 master's-level modules on AI for radiography students.</div>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">GANs</span>
+            <span class="exp-tag">CNNs</span>
+            <span class="exp-tag">Radiomics</span>
+            <span class="exp-tag">PI-CAI</span>
+          </div>
+        </div>
 
-         <div class="row">
+        <div class="exp-item">
+          <div class="exp-dot" style="background:var(--indigo);box-shadow:0 0 10px rgba(99,102,241,.6);"></div>
+          <div class="exp-period">May 2018 — Dec 2025</div>
+          <div class="exp-role">Data &amp; Cloud Manager <em style="font-style:normal;font-size:.78rem;color:var(--text-dim);"> (Part-time)</em></div>
+          <div class="exp-org">Norwegian University of Science and Technology (NTNU), Trondheim, Norway</div>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Administered 6 HUNT Cloud research labs (Linux), ensuring GDPR-compliant handling of sensitive patient data.</div>
+            <div class="exp-highlight">Built and maintained data pipelines for 5,000+ patient prostate MRI cohorts (20+ TB).</div>
+            <div class="exp-highlight">Onboarded 40+ researchers and clinicians; resolved 200+ support requests, reducing low-quality scans by ~60%.</div>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Linux</span>
+            <span class="exp-tag">GDPR</span>
+            <span class="exp-tag">Data Pipelines</span>
+            <span class="exp-tag">Cloud Infrastructure</span>
+          </div>
+        </div>
 
-            <div class="two columns header-col">
+        <div class="exp-item">
+          <div class="exp-dot" style="background:var(--text-dim);box-shadow:none;"></div>
+          <div class="exp-period">Mar 2017 — Aug 2021</div>
+          <div class="exp-role">Doctoral Researcher</div>
+          <div class="exp-org">Norwegian University of Science and Technology (NTNU), Trondheim, Norway</div>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Developed ML &amp; DL models for multiparametric prostate MRI cancer detection and localization.</div>
+            <div class="exp-highlight">Created and released <strong>pyAutoRef</strong> (MRI normalization) and <strong>pyPSQC</strong> (segmentation QC) — open-source Python tools used globally.</div>
+            <div class="exp-highlight">Published 3 first-author papers; helped secure follow-on funding for the research programme.</div>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">PhD Research</span>
+            <span class="exp-tag">Open Source</span>
+            <span class="exp-tag">nnU-Net</span>
+            <span class="exp-tag">Scientific Writing</span>
+          </div>
+        </div>
 
-               <h1><span>Selected Publications</span></h1>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ─── Featured Project: PROVIZ ──────────────────────────── -->
+<section id="proviz">
+  <div class="container">
+    <div style="margin-bottom:2.5rem;" class="fade-in">
+      <div class="section-label">Flagship Project</div>
+      <h2 class="section-title">PROVIZ — From Research<br><span class="gradient-text">to Clinical AI Product</span></h2>
+    </div>
+
+    <div class="proviz-card fade-in">
+      <div class="proviz-left">
+        <div>
+          <div class="proviz-eyebrow">
+            <i class="fa-solid fa-circle-check"></i> Prospectively Validated
+          </div>
+          <h2 class="proviz-title">
+            AI-Powered<br>Prostate Cancer<br>
+            <span class="gradient-text">Detection on MRI</span>
+          </h2>
+          <p class="proviz-sub">
+            PROVIZ is a fully automated AI decision-support system that analyses prostate MRI,
+            outputs cancer probability maps, and assists radiologists in detecting clinically significant
+            tumours. I led this system from a PhD thesis prototype to a prospectively validated,
+            EU MDR-aligned clinical software.
+          </p>
+        </div>
+
+        <div>
+          <div class="proviz-metrics">
+            <div class="proviz-metric">
+              <div class="proviz-metric-val">TRL 2→7</div>
+              <div class="proviz-metric-label">Technology Readiness</div>
             </div>
-
-            <div class="ten columns flex-container">
-
-               <div class="flexslider">
-
-                  <ul class="slides">
-
-                     <li>
-                        <blockquote>
-                           <p>Prospective validation of an AI software for detecting clinically significant prostate cancer on biparametric MRI.
-                           </p>
-                           <cite>Insights into Imaging.17:20.</cite>
-                           <cite>Mohammed R.S. Sunoqrot, Rebecca Segre, Gabriel A. Nketiah, Petter Davik, Torill A. E. Sjøbakk, Sverre Langørgen, Mattijs Elschot, Tone F. Bathen (2026)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-					  <li>
-                        <blockquote>
-                           <p>Artificial intelligence for prostate MRI: open datasets, available applications, and grand
-                              challenges.
-                           </p>
-                           <cite>European Radiology Experimental.6:35.</cite>
-                           <cite>Mohammed R.S. Sunoqrot, Anindo Saha, Matin Hosseinzadeh, Mattijs Elschot, Henkjan Huisman (2022)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>A comparison of Generative Adversarial Networks for automated prostate cancer detection on T2-weighted MRI.
-                           </p>
-                           <cite>Informatics in Medicine Unlocked 39:101234</cite>
-                           <cite>Alexandros Patsanis, Mohammed R.S. Sunoqrot, Sverre Langørgen, Hao Wang, Kirsten M. Selnæs,
-                              Helena Bertilsson, Tone F. Bathen, Mattijs Elschot (2023)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>Label-set impact on deep learning-based prostate segmentation on MRI.
-                           </p>
-                           <cite>Insights Imaging 14:157</cite>
-                           <cite>Jakob Meglič, Mohammed R.S. Sunoqrot, Tone F. Bathen, Mattijs Elschot (2023)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>The Reproducibility of Deep Learning-Based Segmentation of the Prostate Gland and Zones on
-                              T2-Weighted MR Images.
-                           </p>
-                           <cite>Diagnostics 11, no. 9: 1690.</cite>
-                           <cite>Mohammed R. S. Sunoqrot, Kirsten M. Selnæs, Elise Sandsmark, Sverre Langørgen, Helena
-                              Bertilsson, Tone F. Bathen, and Mattijs Elschot (2021)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>A Quality Control System for Automated Prostate Segmentation on T2-Weighted MRI.
-                           </p>
-                           <cite>Diagnostics 10, no. 9: 714.</cite>
-                           <cite>Mohammed R.S. Sunoqrot, Kirsten M. Selnæs, Elise Sandsmark, Gabriel A. Nketiah,
-                              Olmo Zavala-Romero, Radka Stoyanova, Tone F. Bathen, Mattijs Elschot (2020)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                     <li>
-                        <blockquote>
-                           <p>Automated reference tissue normalization of T2-weighted MR images of the prostate using
-                              object recognitions.
-                           </p>
-                           <cite>Magn Reson Mater Phy 34, 309–321.</cite>
-                           <cite>Mohammed R.S. Sunoqrot, Gabriel A. Nketiah, Kirsten M. Selnæs, Gabriel A. Nketiah,
-                              Tone F. Bathen, Mattijs Elschot(2020)</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-
-                  </ul>
-
-               </div> <!-- div.flexslider ends -->
-
-            </div> <!-- div.flex-container ends -->
-
-         </div> <!-- row ends -->
-
-      </div> <!-- text-container ends -->
-
-   </section> <!-- Testimonials Section End-->
-   -->
-
-   <!-- Contact Section
-   ================================================== -->
-   <section id="contact">
-
-      <div class="row section-head">
-
-         <div class="two columns header-col">
-
-            <h1><span>Get In Touch.</span></h1>
-
-         </div>
-
-         <div class="ten columns">
-
-            <p class="lead">Feel free to contact me for a potintial colaboration, job offer, or an inquiry.
-            </p>
-
-         </div>
-
-      </div>
-
-      <div class="row">
-
-         <div class="eight columns">
-
-            <!-- form -->
-            <form action="" method="post" id="contactForm" name="contactForm">
-               <fieldset>
-
-                  <div>
-                     <label for="contactName">Name <span class="required">*</span></label>
-                     <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-                     <label for="contactEmail">Email <span class="required">*</span></label>
-                     <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-                     <label for="contactSubject">Subject</label>
-                     <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                  </div>
-
-               </fieldset>
-            </form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <div id="message-warning"> Error boy</div>
-            <!-- contact-success -->
-            <div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+            <div class="proviz-metric">
+              <div class="proviz-metric-val">115+</div>
+              <div class="proviz-metric-label">Patients Enrolled</div>
             </div>
+            <div class="proviz-metric">
+              <div class="proviz-metric-val">€800K+</div>
+              <div class="proviz-metric-label">Funding Raised</div>
+            </div>
+            <div class="proviz-metric">
+              <div class="proviz-metric-val">2026</div>
+              <div class="proviz-metric-label">Published in Insights Imaging</div>
+            </div>
+          </div>
 
-         </div>
-
-
-         <aside class="four columns footer-widgets">
-
-            <div class="widget widget_contact">
-
-               <div class="widget widget_contact">
-
-                  <!-- <h4>Address and Phone</h4>
-                  <p class="address">
-                     Mohammed R. S. Sunoqrot<br>
-                     1.306B Fred Kavli-bygget, del 1 Øya<br>
-                     7030 Trondheim, Norway<br>
-                     <span>(+47) 46632587</span>
-                  </p> -->
-
-               </div>
-               <!-- 
-               <div class="widget widget_tweets">
-
-                  <h4 class="widget-title">Latest Tweets</h4>
-
-                  <ul id="twitter">
-                     <li>
-                        <span>
-                           This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-                           <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                     </li>
-                     <li>
-                        <span>
-                           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                           laudantium, totam rem aperiam,
-                           eaque ipsa quae ab illo inventore veritatis et quasi
-                           <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                     </li>
-                  </ul>
-
-               </div> -->
-
-         </aside>
-
+          <div style="display:flex;gap:.85rem;flex-wrap:wrap;">
+            <a href="https://www.ntnutto.no/prosjekter-items/proviz/" target="_blank" class="btn-primary" style="font-size:.85rem;padding:.65rem 1.4rem;">
+              <i class="fa-solid fa-external-link"></i> NTNU TTO Profile
+            </a>
+            <a href="https://doi.org/10.1186/s13244-026-01597-7" target="_blank" class="btn-outline" style="font-size:.85rem;padding:.65rem 1.4rem;">
+              <i class="fa-solid fa-file-lines"></i> Published Paper
+            </a>
+          </div>
+        </div>
       </div>
 
-   </section> <!-- Contact Section End-->
+      <div class="proviz-right">
+        <h4 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan);margin-bottom:.5rem;">Development Journey</h4>
 
+        <div class="proviz-phase">
+          <div class="proviz-phase-header">
+            <div class="proviz-phase-icon" style="background:rgba(99,102,241,.15);color:#A5B4FC;">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h4>Phase 1 — Algorithm R&amp;D</h4>
+          </div>
+          <p>Developed deep learning and radiomics pipelines for prostate cancer detection, segmentation, and normalization on multiparametric MRI.</p>
+        </div>
 
-   <!-- footer
-   ================================================== -->
-   <footer>
+        <div class="proviz-phase">
+          <div class="proviz-phase-header">
+            <div class="proviz-phase-icon" style="background:rgba(6,182,212,.1);color:var(--cyan);">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h4>Phase 2 — Innovation &amp; IP</h4>
+          </div>
+          <p>Formalized product concept, conducted market analysis, and filed international patent PCT/EP2023/061976 through NTNU TTO.</p>
+        </div>
 
-      <div class="row">
+        <div class="proviz-phase">
+          <div class="proviz-phase-header">
+            <div class="proviz-phase-icon" style="background:rgba(16,185,129,.1);color:var(--green);">
+              <i class="fa-solid fa-hospital"></i>
+            </div>
+            <h4>Phase 3 — Clinical Validation</h4>
+          </div>
+          <p>Designed and ran prospective clinical study (NCT06000046) at St. Olavs Hospital, integrating PROVIZ into routine radiology workflow.</p>
+        </div>
 
-         <div class="twelve columns">
+        <div class="proviz-phase">
+          <div class="proviz-phase-header">
+            <div class="proviz-phase-icon" style="background:rgba(59,130,246,.12);color:var(--blue-lt);">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4>Phase 4 — Regulatory &amp; MDR</h4>
+          </div>
+          <p>Authored complete EU MDR technical documentation for SaMD (Software as a Medical Device), obtained ethics and regulatory approvals.</p>
+        </div>
 
-            <ul class="social-links">
-               <li><a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://github.com/MohammedSunoqrot"><i class="fa fa-github"></i></a></li>
-               <li><a href="https://twitter.com/SunoqrotM"><i class="fa fa-twitter"></i></a></li>
-            </ul>
+        <div class="proviz-patent">
+          <i class="fa-solid fa-certificate fa-lg"></i>
+          <span><strong>Patent Filed:</strong> PCT/EP2023/061976 — Machine &amp; deep learning solutions for radiology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <ul class="copyright">
-               <li>&copy; Copyright 2014 CeeVee</li>
-               <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>
-            </ul>
+<!-- ─── Skills ─────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <div style="margin-bottom:2.5rem;" class="fade-in">
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-title">Skills &amp; <span class="gradient-text">Expertise</span></h2>
+    </div>
 
-         </div>
-
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
-         </div>
-
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(59,130,246,.12);color:var(--blue-lt);">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h3>AI &amp; Machine Learning</h3>
+        <div class="skill-items">
+          <div class="skill-item">Deep Learning (CNNs, GANs, nnU-Net)</div>
+          <div class="skill-item">Radiomics &amp; Feature Engineering</div>
+          <div class="skill-item">Image Segmentation &amp; Detection</div>
+          <div class="skill-item">Model Validation &amp; Benchmarking</div>
+          <div class="skill-item">Decision Support Systems</div>
+          <div class="skill-item">AI Performance Evaluation</div>
+        </div>
       </div>
 
-   </footer> <!-- Footer End-->
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(16,185,129,.1);color:var(--green);">
+          <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <h3>Product &amp; Project Leadership</h3>
+        <div class="skill-items">
+          <div class="skill-item">Product Vision &amp; Roadmapping</div>
+          <div class="skill-item">Backlog &amp; Prioritization</div>
+          <div class="skill-item">Stakeholder Management</div>
+          <div class="skill-item">Cross-functional Team Leadership</div>
+          <div class="skill-item">Grant Writing &amp; Budget Management</div>
+          <div class="skill-item">Risk Assessment &amp; Mitigation</div>
+        </div>
+      </div>
 
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(6,182,212,.1);color:var(--cyan);">
+          <i class="fa-solid fa-file-medical"></i>
+        </div>
+        <h3>Regulatory &amp; Clinical</h3>
+        <div class="skill-items">
+          <div class="skill-item">EU MDR (SaMD) Documentation</div>
+          <div class="skill-item">Clinical Study Design &amp; Execution</div>
+          <div class="skill-item">Ethics &amp; Regulatory Approvals</div>
+          <div class="skill-item">AI Act Awareness</div>
+          <div class="skill-item">GDPR-compliant Data Handling</div>
+          <div class="skill-item">Translational Research Management</div>
+        </div>
+      </div>
 
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(99,102,241,.1);color:#A5B4FC;">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Programming &amp; Data</h3>
+        <div class="skill-items">
+          <div class="skill-item">Python (primary)</div>
+          <div class="skill-item">MATLAB</div>
+          <div class="skill-item">GitHub / Version Control</div>
+          <div class="skill-item">Linux / Shell Scripting</div>
+          <div class="skill-item">Large-scale Data Pipelines</div>
+          <div class="skill-item">Research Cloud Infrastructure</div>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(249,115,22,.1);color:#FB923C;">
+          <i class="fa-solid fa-microscope"></i>
+        </div>
+        <h3>Medical Imaging</h3>
+        <div class="skill-items">
+          <div class="skill-item">Prostate MRI (mpMRI / bpMRI)</div>
+          <div class="skill-item">MRI Pre-processing &amp; Normalization</div>
+          <div class="skill-item">Radiology Workflow Integration</div>
+          <div class="skill-item">Image Quality Assessment</div>
+          <div class="skill-item">DICOM &amp; Clinical Data Formats</div>
+          <div class="skill-item">Computer-Aided Diagnosis (CAD)</div>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon" style="background:rgba(168,85,247,.1);color:#C084FC;">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3>Research &amp; Communication</h3>
+        <div class="skill-items">
+          <div class="skill-item">Scientific Writing (17+ papers)</div>
+          <div class="skill-item">Peer Review (50+ completed)</div>
+          <div class="skill-item">International Conference Presentations</div>
+          <div class="skill-item">Student Supervision (7 students)</div>
+          <div class="skill-item">Invited Talks (Siemens, ISMRM)</div>
+          <div class="skill-item">Interdisciplinary Collaboration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Open Source Projects ──────────────────────────────── -->
+<section id="projects">
+  <div class="container">
+    <div style="margin-bottom:2.5rem;" class="fade-in">
+      <div class="section-label">Open Source</div>
+      <h2 class="section-title">Software <span class="gradient-text">Contributions</span></h2>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">🔬</span>
+          <div class="project-links">
+            <a href="https://github.com/MohammedSunoqrot/pyAutoRef" target="_blank" class="project-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>pyAutoRef</h3>
+        <p>Automated dual-reference tissue normalization of T2-weighted prostate MRI images using object recognition. Available via <code style="color:var(--blue-lt);font-size:.8rem;">pip install pyAutoRef</code>.</p>
+        <div class="project-footer">
+          <span class="tag">Python</span>
+          <span class="tag cyan">MRI Normalization</span>
+          <span class="tag green">pip package</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">✅</span>
+          <div class="project-links">
+            <a href="https://github.com/MohammedSunoqrot/pyPSQC" target="_blank" class="project-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>pyPSQC</h3>
+        <p>Fully automated quality control system for prostate segmentation on T2W MRI. Generates quality scores and classes for automated segmentation pipelines. Also available via pip.</p>
+        <div class="project-footer">
+          <span class="tag">Python</span>
+          <span class="tag indigo">Segmentation QC</span>
+          <span class="tag green">pip package</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">🧬</span>
+          <div class="project-links">
+            <a href="https://github.com/alexofficial/PCaGAN" target="_blank" class="project-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>PCaGAN</h3>
+        <p>Generative Adversarial Networks for automated prostate cancer detection on biparametric MRI. Research collaboration benchmarking GAN architectures for cancer detection.</p>
+        <div class="project-footer">
+          <span class="tag">Python</span>
+          <span class="tag">GANs</span>
+          <span class="tag cyan">Prostate Cancer</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">📊</span>
+          <div class="project-links">
+            <a href="https://github.com/MohammedSunoqrot/SegmentationReproducibility" target="_blank" class="project-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>Segmentation Reproducibility</h3>
+        <p>Investigation of radiomics feature reproducibility and the impact of deep learning-based prostate segmentation variations on downstream analysis and clinical studies.</p>
+        <div class="project-footer">
+          <span class="tag">Radiomics</span>
+          <span class="tag indigo">Reproducibility</span>
+          <span class="tag">Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">🏆</span>
+          <div class="project-links">
+            <a href="https://pi-cai.grand-challenge.org/" target="_blank" class="project-link" aria-label="External">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+        <h3>PI-CAI Grand Challenge</h3>
+        <p>Consortium member in the Prostate Imaging Cancer AI initiative — a major international benchmarking challenge built on 10,000+ MRI exams from 9,000+ patients across 4 European centres, involving 830+ AI developers from 50+ countries.</p>
+        <div class="project-footer">
+          <span class="tag green">Consortium</span>
+          <span class="tag">10K+ Exams</span>
+          <span class="tag cyan">Benchmarking</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <span class="project-icon">📚</span>
+          <div class="project-links">
+            <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="project-link" aria-label="Google Scholar">
+              <i class="fa-brands fa-google-scholar"></i>
+            </a>
+          </div>
+        </div>
+        <h3>Review Editor, Frontiers in Oncology</h3>
+        <p>Serving as review editor and active peer reviewer for Q1 journals in medical imaging, radiology, and AI. 50+ peer reviews completed, contributing to quality science in the field.</p>
+        <div class="project-footer">
+          <span class="tag indigo">Peer Review</span>
+          <span class="tag">50+ Reviews</span>
+          <span class="tag green">Q1 Journals</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Publications ──────────────────────────────────────── -->
+<section id="publications">
+  <div class="container">
+    <div class="pub-header-row fade-in">
+      <div>
+        <div class="section-label">Research Output</div>
+        <h2 class="section-title">Selected <span class="gradient-text">Publications</span></h2>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-top:.4rem;">17+ journal papers · 30+ conference abstracts · 1 book chapter · H-index 9</p>
+      </div>
+      <div class="pub-links-row">
+        <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="pub-link-btn">
+          <i class="fa-brands fa-google-scholar"></i> Google Scholar
+        </a>
+        <a href="https://orcid.org/0000-0001-9239-1683" target="_blank" class="pub-link-btn">
+          <i class="fa-brands fa-orcid"></i> ORCID
+        </a>
+        <a href="https://nva.sikt.no/research-profile/891930" target="_blank" class="pub-link-btn">
+          <i class="fa-solid fa-book-open"></i> NVA
+        </a>
+      </div>
+    </div>
+
+    <div class="pub-list fade-in">
+
+      <div class="pub-item">
+        <div class="pub-num">01</div>
+        <div class="pub-body">
+          <h4>Prospective validation of an AI software for detecting clinically significant prostate cancer on biparametric MRI</h4>
+          <div class="pub-meta">
+            <em>Insights into Imaging 17, 20</em> · <span class="pub-year-badge">2026</span><br>
+            Sunoqrot MRS, Segre R, Nketiah GA, Davik P, Sjøbakk TAE, Langørgen S, Elschot M, Bathen TF
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">02</div>
+        <div class="pub-body">
+          <h4>A comparison of Generative Adversarial Networks for automated prostate cancer detection on T2-weighted MRI</h4>
+          <div class="pub-meta">
+            <em>Informatics in Medicine Unlocked 39, 101234</em> · <span class="pub-year-badge">2023</span><br>
+            Patsanis A, Sunoqrot MRS, Langørgen S, Wang H, Selnæs KM, Bertilsson H, Bathen TF, Elschot M
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">03</div>
+        <div class="pub-body">
+          <h4>Label-set impact on deep learning-based prostate segmentation on MRI</h4>
+          <div class="pub-meta">
+            <em>Insights Imaging 14, 157</em> · <span class="pub-year-badge">2023</span><br>
+            Meglič J, Sunoqrot MRS, Bathen TF, Elschot M
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">04</div>
+        <div class="pub-body">
+          <h4>Artificial intelligence for prostate MRI: open datasets, available applications, and grand challenges</h4>
+          <div class="pub-meta">
+            <em>European Radiology Experimental 6, 35</em> · <span class="pub-year-badge">2022</span><br>
+            Sunoqrot MRS, Saha A, Hosseinzadeh M, Elschot M, Huisman H
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">05</div>
+        <div class="pub-body">
+          <h4>Automated reference tissue normalization of T2-weighted MR images of the prostate using object recognition</h4>
+          <div class="pub-meta">
+            <em>Magnetic Resonance in Materials in Physics 34, 309–321</em> · <span class="pub-year-badge">2021</span><br>
+            Sunoqrot MRS, Nketiah GA, Selnæs KM, Bathen TF, Elschot M
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">06</div>
+        <div class="pub-body">
+          <h4>The Reproducibility of Deep Learning-Based Segmentation of the Prostate Gland and Zones on T2-Weighted MR Images</h4>
+          <div class="pub-meta">
+            <em>Diagnostics 11, 1690</em> · <span class="pub-year-badge">2021</span><br>
+            Sunoqrot MRS, Selnæs KM, Sandsmark E, Langørgen S, Bertilsson H, Bathen TF, Elschot M
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">07</div>
+        <div class="pub-body">
+          <h4>A Quality Control System for Automated Prostate Segmentation on T2-Weighted MRI</h4>
+          <div class="pub-meta">
+            <em>Diagnostics 10, 714</em> · <span class="pub-year-badge">2020</span><br>
+            Sunoqrot MRS, Selnæs KM, Sandsmark E, Nketiah GA, Zavala-Romero O, Stoyanova R, Bathen TF, Elschot M
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Funding ────────────────────────────────────────────── -->
+<section id="funding">
+  <div class="container">
+    <div style="margin-bottom:2.5rem;" class="fade-in">
+      <div class="section-label">Research Funding</div>
+      <h2 class="section-title">Grants &amp; <span class="gradient-text">Projects</span></h2>
+    </div>
+
+    <div class="funding-banner fade-in">
+      <div>
+        <h3>Total Funding Portfolio<br>Secured &amp; Managed</h3>
+        <p>From Norwegian Cancer Society and Digital Life Norway to NTNU Discovery and the Liaison Committee between Central Norway Health Authority and NTNU — a track record of winning competitive research funding.</p>
+      </div>
+      <div class="funding-total">
+        <div class="funding-total-num">8M+</div>
+        <div class="funding-total-sub">NOK (~$800K USD)</div>
+      </div>
+    </div>
+
+    <div class="funding-grid fade-in">
+      <div class="funding-item">
+        <div class="funding-role pi">Principal Investigator</div>
+        <h4>PROVIZ: Advancing AI decision support towards industry deployment</h4>
+        <div class="funding-amount">Norwegian Cancer Society · 500K NOK · 2025</div>
+      </div>
+      <div class="funding-item">
+        <div class="funding-role pi">Principal Investigator</div>
+        <h4>AI-based decision support system for detection and localization of prostate cancer</h4>
+        <div class="funding-amount">Liaison Committee NTNU &amp; Central Norway Health Authority · 4M NOK · 2022–2025</div>
+      </div>
+      <div class="funding-item">
+        <div class="funding-role co">Project Co-leader</div>
+        <h4>PROVIZ II: Readying for commercialization</h4>
+        <div class="funding-amount">Digital Life Norway · 1.5M NOK · 2024–2025</div>
+      </div>
+      <div class="funding-item">
+        <div class="funding-role co">Project Co-leader</div>
+        <h4>Deep radiomics decision support system for prostate cancer management</h4>
+        <div class="funding-amount">NTNU Discovery Main Grant · 1M NOK · 2024–2025</div>
+      </div>
+      <div class="funding-item">
+        <div class="funding-role lead">Project Leader</div>
+        <h4>PROVIZ proof-of-technology clinical study</h4>
+        <div class="funding-amount">NTNU &amp; St. Olavs Hospital · 2023–2025</div>
+      </div>
+      <div class="funding-item">
+        <div class="funding-role lead">Project Leader &amp; Manager</div>
+        <h4>PROVIZ innovation six months program</h4>
+        <div class="funding-amount">Digital Life Norway Innovation Pilot · 600K NOK · 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info fade-in">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p>
+          I am open to opportunities in AI product leadership, medical imaging, healthtech, and
+          translational AI research. Whether you are building a team, exploring collaboration,
+          or want to discuss AI in healthcare — I would love to hear from you.
+        </p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <a href="mailto:mohammed.sunoqrot@gmail.com">mohammed.sunoqrot@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank">linkedin.com/in/mohammed-r-s-sunoqrot</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <span style="color:var(--text-muted);">Trondheim, Norway · Norwegian Citizen</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-language"></i></div>
+            <span style="color:var(--text-muted);">Arabic (native) · English (fluent) · Norwegian (intermediate)</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding:1.25rem 1.5rem;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;">
+          <div style="font-size:.82rem;color:var(--text-muted);">
+            <i class="fa-solid fa-circle-check" style="color:var(--green);margin-right:.5rem;"></i>
+            <strong style="color:var(--text);">Open to relocation</strong> for the right opportunity.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-in">
+        <h3>Send a Message</h3>
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message…" required></textarea>
+          </div>
+          <button type="submit" class="btn-form">
+            <i class="fa-solid fa-paper-plane" style="margin-right:.5rem;"></i> Send Message
+          </button>
+          <p id="form-status" style="display:none;margin-top:.85rem;font-size:.85rem;text-align:center;"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>© 2025 Mohammed R.S. Sunoqrot — Trondheim, Norway</p>
+        <p style="margin-top:.2rem;">AI Product Leader · Medical Imaging Researcher · PhD</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/MohammedSunoqrot" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://orcid.org/0000-0001-9239-1683" target="_blank" aria-label="ORCID">
+          <i class="fa-brands fa-orcid"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" aria-label="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i>
+        </a>
+        <a href="https://twitter.com/SunoqrotM" target="_blank" aria-label="Twitter/X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Scripts ────────────────────────────────────────────── -->
+<script>
+// ── Nav scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ── Mobile hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// ── Animated counters
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  let start = 0;
+  const step  = Math.max(1, Math.floor(target / 60));
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    // Format with commas for large numbers
+    el.textContent = target >= 1000
+      ? start.toLocaleString() + suffix
+      : start + suffix;
+    if (start >= target) clearInterval(timer);
+  }, 20);
+}
+
+// ── Intersection Observer for fade-in + counters
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Trigger counters
+      entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Observe stats section separately for counters
+const statsSection = document.getElementById('stats');
+if (statsSection) {
+  const statsObs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('[data-target]').forEach(animateCounter);
+      statsObs.disconnect();
+    }
+  }, { threshold: 0.2 });
+  statsObs.observe(statsSection);
+}
+
+// ── Contact form (mailto fallback)
+function handleContact(e) {
+  e.preventDefault();
+  const name    = document.getElementById('name').value;
+  const email   = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value || 'Message from your website';
+  const message = document.getElementById('message').value;
+
+  const body = encodeURIComponent(
+    `Hi Mohammed,\n\n${message}\n\nBest regards,\n${name}\n${email}`
+  );
+  const mailto = `mailto:mohammed.sunoqrot@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = mailto;
+
+  const status = document.getElementById('form-status');
+  status.style.display = 'block';
+  status.style.color   = '#34D399';
+  status.textContent   = 'Opening your email client…';
+}
+
+// ── Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
 
 </body>
-
 </html>
