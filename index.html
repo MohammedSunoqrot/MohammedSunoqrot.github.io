@@ -439,15 +439,15 @@
     }
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1rem;
     }
     .stat-item {
       text-align: center;
-      padding: 1.2rem .5rem;
+      padding: 1.2rem .25rem;
     }
     .stat-num {
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: 800;
       font-family: 'JetBrains Mono', monospace;
       background: linear-gradient(135deg, var(--blue-lt), var(--cyan));
@@ -1027,6 +1027,7 @@
     .pub-item {
       display: flex;
       gap: 1.25rem;
+      align-items: flex-start;
       padding: 1.25rem 1.5rem;
       background: var(--card);
       border: 1px solid var(--border);
@@ -1037,6 +1038,15 @@
       border-color: rgba(59,130,246,.35);
       background: var(--card2);
     }
+    .pub-link {
+      margin-left: auto;
+      padding-top: .1rem;
+      color: var(--text-dim);
+      font-size: .85rem;
+      transition: color .2s;
+      flex-shrink: 0;
+    }
+    .pub-link:hover { color: var(--blue-lt); }
     .pub-num {
       font-size: .8rem;
       font-family: 'JetBrains Mono', monospace;
@@ -1350,11 +1360,11 @@
 <!-- ─── Nav ──────────────────────────────────────────────── -->
 <nav id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">MRS<span>.</span></div>
+    <div class="nav-logo">Mohammed R. S. Sunoqrot<span>.</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#proviz">PROVIZ</a></li>
+      <li><a href="#proviz">Case Study</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -1386,13 +1396,13 @@
 
         <p class="hero-title">
           <strong>AI Product Leader, Manager</strong> &amp; <strong>Researcher</strong>
-          <br>PhD · NTNU · 9+ Years in Clinical AI
+          <br>PhD · 9+ Years of Experience in AI
         </p>
 
         <p class="hero-desc">
-          I build AI that saves lives. From writing the first lines of research code to securing €800K in
-          funding, running prospective clinical trials, and preparing EU MDR regulatory filings —
-          I bridge the gap between cutting-edge AI and real clinical impact.
+          I take AI from research to reality. A decade spanning ML research, product strategy,
+          funding, prospective trials, and EU MDR regulatory filings has given me a rare vantage
+          point. I understand AI deeply enough to push it forward, and practically enough to know what's worth building.
         </p>
 
         <div class="hero-btns">
@@ -1417,16 +1427,13 @@
           <a href="https://orcid.org/0000-0001-9239-1683" target="_blank" aria-label="ORCID" data-tooltip="ORCID">
             <i class="fa-brands fa-orcid"></i>
           </a>
-          <a href="https://twitter.com/SunoqrotM" target="_blank" aria-label="Twitter/X" data-tooltip="Twitter/X">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
         </div>
       </div>
 
       <div class="hero-avatar-wrap">
         <div class="hero-avatar-ring"></div>
         <img src="images/profilepic.jpg" alt="Mohammed Sunoqrot" class="hero-avatar" />
-        <span class="hero-avatar-badge">PhD · AI · MRI</span>
+        <span class="hero-avatar-badge">PhD · AI</span>
       </div>
     </div>
   </div>
@@ -1441,24 +1448,28 @@
         <div class="stat-label">USD Funding Secured</div>
       </div>
       <div class="stat-item fade-in">
-        <div class="stat-num" data-target="115" data-suffix="+">0</div>
-        <div class="stat-label">Patients Enrolled</div>
+        <div class="stat-num" data-target="5" data-suffix="+">0</div>
+        <div class="stat-label">AI Systems Shipped</div>
       </div>
       <div class="stat-item fade-in">
-        <div class="stat-num" data-target="17" data-suffix="+">0</div>
-        <div class="stat-label">Peer-Reviewed Papers</div>
+        <div class="stat-num" data-target="9" data-suffix="+ yrs">0</div>
+        <div class="stat-label">Experience with AI</div>
       </div>
       <div class="stat-item fade-in">
-        <div class="stat-num" data-target="9" data-suffix="">0</div>
-        <div class="stat-label">H-Index</div>
+        <div class="stat-num" data-target="50" data-suffix="+">0</div>
+        <div class="stat-label">Stakeholders Engaged</div>
       </div>
       <div class="stat-item fade-in">
         <div class="stat-num" data-target="5000" data-suffix="+">0</div>
         <div class="stat-label">Patient Data Managed</div>
       </div>
       <div class="stat-item fade-in">
-        <div class="stat-num" data-target="9" data-suffix="+ yrs">0</div>
-        <div class="stat-label">Years in AI Research</div>
+        <div class="stat-num" data-target="40" data-suffix="+">0</div>
+        <div class="stat-label">Cloud Users Onboarded</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num" data-target="17" data-suffix="+">0</div>
+        <div class="stat-label">Peer-Reviewed Papers</div>
       </div>
     </div>
   </div>
@@ -1470,24 +1481,24 @@
     <div class="about-grid">
       <div class="about-text fade-in">
         <div class="section-label">About Me</div>
-        <h2 class="section-title">Where AI Research Meets<br><span class="gradient-text">Clinical Reality</span></h2>
+        <h2 class="section-title">Where AI Innovation Meets <span class="gradient-text">Reality</span></h2>
 
         <p>
-          I am an <strong>AI Product Leader and Medical Imaging Researcher</strong> with a PhD in Medical
+          I am an <strong>AI Product Leader, Manager and Researcher</strong> with a PhD in Medical
           Technology from NTNU and 9+ years of experience at the intersection of artificial intelligence,
           biomedical engineering, and translational healthcare innovation.
         </p>
         <p>
           My flagship achievement is <strong>PROVIZ</strong> — an AI-based decision-support system for
           prostate MRI that I drove from early-stage research (TRL 2) to a clinically validated,
-          EU MDR-aligned product (TRL ~7). Along the way, I secured €800K+ in grants, designed and ran
+          EU MDR-aligned product (TRL ~7). Along the way, I secured $800K+ in grants, designed and ran
           a prospective clinical study with 115+ patients, authored regulatory documentation, and built
           collaborative pipelines with radiologists, IT engineers, and medtech companies.
         </p>
         <p>
           I bring a rare combination of <strong>deep technical expertise</strong> (machine learning, deep
           learning, radiomics, Python) and <strong>product leadership skills</strong> (roadmapping,
-          stakeholder management, EU MDR/SaMD compliance) — exactly what organizations need to turn
+          stakeholder management, regulatory compliance), exactly what organizations need to turn
           AI research into real-world healthcare products.
         </p>
 
@@ -1498,7 +1509,8 @@
             </div>
             <div class="value-prop-text">
               <h4>Deep AI Expertise</h4>
-              <p>GANs, CNNs, radiomics, nnU-Net — not just a PM who talks about AI, but someone who builds it.</p>
+              <p>CNNs, GANs, XGBoost, Radiomics, nnU-Net.
+                <br><i>Not just a PM who talks about AI, but someone who builds it.</i></p>
             </div>
           </div>
           <div class="value-prop">
@@ -1506,8 +1518,9 @@
               <i class="fa-solid fa-file-medical"></i>
             </div>
             <div class="value-prop-text">
-              <h4>EU MDR &amp; Regulatory Fluency</h4>
-              <p>Authored risk management, clinical evaluation, and technical files for SaMD — rare in AI leadership.</p>
+              <h4>EU MDR, GDPR &amp; Regulatory Fluency</h4>
+              <p>Authored risk management, clinical evaluation, privacy impact assessment and technical files for SaMD.
+                <br><i>A leader with deep regulatory expertise.</i></p>
             </div>
           </div>
           <div class="value-prop">
@@ -1516,7 +1529,9 @@
             </div>
             <div class="value-prop-text">
               <h4>Proven Product-to-Market Track Record</h4>
-              <p>Moved PROVIZ from TRL 2 to ~7, enrolled clinical study, initiated 10+ industry partnership talks.</p>
+              <p>Moved PROVIZ from TRL 2 to ~7, conducted prospective clinical study, initiated 10+ industry partnership talks.
+                <br><i>Someone who already brought AI products to light.</i>
+              </p>
             </div>
           </div>
         </div>
@@ -1527,25 +1542,39 @@
           <h4>Core Expertise</h4>
           <div class="tag-cloud">
             <span class="tag">AI Product Management</span>
-            <span class="tag">Medical Imaging AI</span>
-            <span class="tag green">EU MDR / SaMD</span>
-            <span class="tag cyan">Clinical Validation</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Radiomics</span>
-            <span class="tag indigo">Python</span>
-            <span class="tag green">Research Leadership</span>
-            <span class="tag cyan">Grant Writing</span>
-            <span class="tag">Prostate MRI</span>
-            <span class="tag indigo">GDPR Compliance</span>
+            <span class="tag">Product Roadmapping</span>
+            <span class="tag">Go-to-Market Strategy</span>
             <span class="tag">Stakeholder Management</span>
-            <span class="tag green">Cross-functional Teams</span>
+            <span class="tag">Cross-functional Teams</span>
+            <span class="tag">Budget Management</span>
+            <span class="tag green">EU MDR / SaMD</span>
+            <span class="tag green">GDPR Compliance</span>
+            <span class="tag green">Clinical Validation</span>
+            <span class="tag indigo">Deep Learning</span>
+            <span class="tag indigo">Machine Learning</span>
+            <span class="tag indigo">Medical Imaging AI</span>
+            <span class="tag indigo">Computer Vision</span>
+            <span class="tag indigo">MLOps</span>
+            <span class="tag indigo">Model Evaluation</span>
+            <span class="tag indigo">Python</span>
             <span class="tag cyan">Data Pipelines</span>
+            <span class="tag cyan">Data Governance</span>
+            <span class="tag">Radiomics</span>
+            <span class="tag">Prostate MRI</span>
           </div>
         </div>
 
         <div class="about-card">
           <h4>Profiles &amp; Links</h4>
           <div class="quick-links">
+            <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-linkedin-in" style="margin-right:.5rem;"></i> LinkedIn</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/MohammedSunoqrot" target="_blank" class="quick-link">
+              <span><i class="fa-brands fa-github" style="margin-right:.5rem;"></i> GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
             <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="quick-link">
               <span><i class="fa-brands fa-google-scholar" style="margin-right:.5rem;"></i> Google Scholar</span>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -1556,18 +1585,6 @@
             </a>
             <a href="https://nva.sikt.no/research-profile/891930" target="_blank" class="quick-link">
               <span><i class="fa-solid fa-book-open" style="margin-right:.5rem;"></i> NVA Research Profile</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" class="quick-link">
-              <span><i class="fa-brands fa-linkedin-in" style="margin-right:.5rem;"></i> LinkedIn</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="https://github.com/MohammedSunoqrot" target="_blank" class="quick-link">
-              <span><i class="fa-brands fa-github" style="margin-right:.5rem;"></i> GitHub</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="https://www.ntnu.edu/employees/mohammed.sunoqrot" target="_blank" class="quick-link">
-              <span><i class="fa-solid fa-university" style="margin-right:.5rem;"></i> NTNU Profile</span>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
@@ -1618,23 +1635,23 @@
           <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem;">
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-trophy" style="color:var(--green);width:1.2rem;"></i>
-              Led 8M+ NOK research portfolio
+              Led 800K+ USD R &amp; D portfolio
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-microscope" style="color:var(--blue-lt);width:1.2rem;"></i>
-              Ran prospective clinical trial (NCT06000046)
+              Ran prospective clinical trial
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-file-contract" style="color:var(--cyan);width:1.2rem;"></i>
-              EU MDR regulatory filings (CIV-NO-23-04-042915)
+              EU MDR regulatory filings 
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-patent" style="color:var(--indigo);width:1.2rem;"></i>
-              Co-inventor PCT/EP2023/061976
+              Patent Co-inventor
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-people-group" style="color:var(--green);width:1.2rem;"></i>
-              PI-CAI Consortium (10,000+ MRI exams)
+              Administered 6+ cloud labs
             </div>
             <div style="display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--text-muted);">
               <i class="fa-solid fa-chalkboard-teacher" style="color:var(--blue-lt);width:1.2rem;"></i>
@@ -1767,8 +1784,8 @@
           </h2>
           <p class="proviz-sub">
             PROVIZ is a fully automated AI decision-support system that analyses prostate MRI,
-            outputs cancer probability maps, and assists radiologists in detecting clinically significant
-            tumours. I led this system from a PhD thesis prototype to a prospectively validated,
+            outputs cancer probability &amp; detection maps, and assists radiologists in detecting clinically significant
+            tumours. I led/co-led this system from an early research project to a prospectively validated,
             EU MDR-aligned clinical software.
           </p>
         </div>
@@ -1784,7 +1801,7 @@
               <div class="proviz-metric-label">Patients Enrolled</div>
             </div>
             <div class="proviz-metric">
-              <div class="proviz-metric-val">€800K+</div>
+              <div class="proviz-metric-val">$800K+</div>
               <div class="proviz-metric-label">Funding Raised</div>
             </div>
             <div class="proviz-metric">
@@ -1797,7 +1814,7 @@
             <a href="https://www.ntnutto.no/prosjekter-items/proviz/" target="_blank" class="btn-primary" style="font-size:.85rem;padding:.65rem 1.4rem;">
               <i class="fa-solid fa-external-link"></i> NTNU TTO Profile
             </a>
-            <a href="https://doi.org/10.1186/s13244-026-01597-7" target="_blank" class="btn-outline" style="font-size:.85rem;padding:.65rem 1.4rem;">
+            <a href="https://doi.org/10.1186/s13244-025-02199-9" target="_blank" class="btn-outline" style="font-size:.85rem;padding:.65rem 1.4rem;">
               <i class="fa-solid fa-file-lines"></i> Published Paper
             </a>
           </div>
@@ -1814,7 +1831,7 @@
             </div>
             <h4>Phase 1 — Algorithm R&amp;D</h4>
           </div>
-          <p>Developed deep learning and radiomics pipelines for prostate cancer detection, segmentation, and normalization on multiparametric MRI.</p>
+          <p>Selected and helped in the development of deep learning and radiomics pipelines for prostate cancer detection, segmentation, and normalization on biparametric MRI.</p>
         </div>
 
         <div class="proviz-phase">
@@ -1832,21 +1849,19 @@
             <div class="proviz-phase-icon" style="background:rgba(16,185,129,.1);color:var(--green);">
               <i class="fa-solid fa-hospital"></i>
             </div>
-            <h4>Phase 3 — Clinical Validation</h4>
+            <h4>Phase 3 — Regulatory &amp; MDR</h4>
           </div>
-          <p>Designed and ran prospective clinical study (NCT06000046) at St. Olavs Hospital, integrating PROVIZ into routine radiology workflow.</p>
+          <p>Authored complete EU MDR technical documentation for SaMD (Software as a Medical Device), obtained ethics and regulatory approvals.</p>
         </div>
-
         <div class="proviz-phase">
           <div class="proviz-phase-header">
             <div class="proviz-phase-icon" style="background:rgba(59,130,246,.12);color:var(--blue-lt);">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h4>Phase 4 — Regulatory &amp; MDR</h4>
+            <h4>Phase 4 — Clinical Validation</h4>
           </div>
-          <p>Authored complete EU MDR technical documentation for SaMD (Software as a Medical Device), obtained ethics and regulatory approvals.</p>
+          <p>Designed and ran prospective clinical study (NCT06000046) at St. Olavs Hospital, integrating PROVIZ into routine radiology workflow.</p>
         </div>
-
         <div class="proviz-patent">
           <i class="fa-solid fa-certificate fa-lg"></i>
           <span><strong>Patent Filed:</strong> PCT/EP2023/061976 — Machine &amp; deep learning solutions for radiology</span>
@@ -2059,21 +2074,23 @@
 
       <div class="project-card fade-in">
         <div class="project-header">
-          <span class="project-icon">📚</span>
+          <span class="project-icon">📊</span>
           <div class="project-links">
-            <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" class="project-link" aria-label="Google Scholar">
-              <i class="fa-brands fa-google-scholar"></i>
+            <a href="https://github.com/ntnu-mr-cancer/POT-Analysis" target="_blank" class="project-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
             </a>
           </div>
         </div>
-        <h3>Review Editor, Frontiers in Oncology</h3>
-        <p>Serving as review editor and active peer reviewer for Q1 journals in medical imaging, radiology, and AI. 50+ peer reviews completed, contributing to quality science in the field.</p>
+        <h3>POT-Analysis</h3>
+        <p>Clinical analysis pipeline for the PROVIZ proof-of-technology study — evaluating AI diagnostic performance vs. expert radiologists in prostate MRI interpretation, using PI-RADS v2.1 standards and biopsy-confirmed findings.</p>
         <div class="project-footer">
-          <span class="tag indigo">Peer Review</span>
-          <span class="tag">50+ Reviews</span>
-          <span class="tag green">Q1 Journals</span>
+          <span class="tag green">Clinical Validation</span>
+          <span class="tag indigo">Python</span>
+          <span class="tag cyan">Statistical Analysis</span>
+          <span class="tag">Prostate MRI</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -2111,6 +2128,9 @@
             Sunoqrot MRS, Segre R, Nketiah GA, Davik P, Sjøbakk TAE, Langørgen S, Elschot M, Bathen TF
           </div>
         </div>
+        <a href="https://doi.org/10.1186/s13244-025-02199-9" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2122,6 +2142,9 @@
             Patsanis A, Sunoqrot MRS, Langørgen S, Wang H, Selnæs KM, Bertilsson H, Bathen TF, Elschot M
           </div>
         </div>
+        <a href="https://doi.org/10.1016/j.imu.2023.101234" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2133,6 +2156,9 @@
             Meglič J, Sunoqrot MRS, Bathen TF, Elschot M
           </div>
         </div>
+        <a href="https://doi.org/10.1186/s13244-023-01502-w" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2144,6 +2170,9 @@
             Sunoqrot MRS, Saha A, Hosseinzadeh M, Elschot M, Huisman H
           </div>
         </div>
+        <a href="https://doi.org/10.1186/s41747-022-00288-8" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2155,6 +2184,9 @@
             Sunoqrot MRS, Nketiah GA, Selnæs KM, Bathen TF, Elschot M
           </div>
         </div>
+        <a href="https://doi.org/10.1007/s10334-020-00871-3" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2166,6 +2198,9 @@
             Sunoqrot MRS, Selnæs KM, Sandsmark E, Langørgen S, Bertilsson H, Bathen TF, Elschot M
           </div>
         </div>
+        <a href="https://doi.org/10.3390/diagnostics11091690" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
       <div class="pub-item">
@@ -2177,6 +2212,9 @@
             Sunoqrot MRS, Selnæs KM, Sandsmark E, Nketiah GA, Zavala-Romero O, Stoyanova R, Bathen TF, Elschot M
           </div>
         </div>
+        <a href="https://doi.org/10.3390/diagnostics10090714" target="_blank" class="pub-link" aria-label="View article">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
 
     </div>
@@ -2187,7 +2225,7 @@
 <section id="funding">
   <div class="container">
     <div style="margin-bottom:2.5rem;" class="fade-in">
-      <div class="section-label">Research Funding</div>
+      <div class="section-label">Secured Funding</div>
       <h2 class="section-title">Grants &amp; <span class="gradient-text">Projects</span></h2>
     </div>
 
@@ -2206,7 +2244,7 @@
       <div class="funding-item">
         <div class="funding-role pi">Principal Investigator</div>
         <h4>PROVIZ: Advancing AI decision support towards industry deployment</h4>
-        <div class="funding-amount">Norwegian Cancer Society · 500K NOK · 2025</div>
+        <div class="funding-amount">Norwegian Cancer Society · 500K NOK · 2026</div>
       </div>
       <div class="funding-item">
         <div class="funding-role pi">Principal Investigator</div>
@@ -2245,9 +2283,9 @@
         <div class="section-label">Get In Touch</div>
         <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
         <p>
-          I am open to opportunities in AI product leadership, medical imaging, healthtech, and
+          I am open to opportunities in AI product leadership, management, and
           translational AI research. Whether you are building a team, exploring collaboration,
-          or want to discuss AI in healthcare — I would love to hear from you.
+          or want to discuss AI in healthcare or translation,I would love to hear from you.
         </p>
 
         <div class="contact-items">
@@ -2261,7 +2299,7 @@
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <span style="color:var(--text-muted);">Trondheim, Norway · Norwegian Citizen</span>
+            <span style="color:var(--text-muted);">Trondheim, Norway</span>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-language"></i></div>
@@ -2311,8 +2349,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-left">
-        <p>© 2025 Mohammed R.S. Sunoqrot — Trondheim, Norway</p>
-        <p style="margin-top:.2rem;">AI Product Leader · Medical Imaging Researcher · PhD</p>
+        <p>© 2026 Mohammed R.S. Sunoqrot</p>
       </div>
       <div class="footer-socials">
         <a href="https://www.linkedin.com/in/mohammed-r-s-sunoqrot" target="_blank" aria-label="LinkedIn">
@@ -2326,9 +2363,6 @@
         </a>
         <a href="https://scholar.google.com/citations?user=_Oj56kYAAAAJ" target="_blank" aria-label="Google Scholar">
           <i class="fa-brands fa-google-scholar"></i>
-        </a>
-        <a href="https://twitter.com/SunoqrotM" target="_blank" aria-label="Twitter/X">
-          <i class="fa-brands fa-x-twitter"></i>
         </a>
       </div>
     </div>
